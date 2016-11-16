@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   ActiveAdmin.routes(self)
-  root :to => "directors#index"
+  root :to => "movies#index"
+
   # Routes for the Character resource:
   # CREATE
   get "/characters/new", :controller => "characters", :action => "new"
